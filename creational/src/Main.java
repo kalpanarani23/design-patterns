@@ -1,3 +1,5 @@
+import builder.Coffee;
+import builder.Phone;
 import singleton.EagerSingleton;
 import singleton.EnumSingleton;
 import singleton.LazySingleton;
@@ -16,6 +18,23 @@ public class Main {
         System.out.println("lazy " + lazySingleton.hashCode());
 
         EnumSingleton.INSTANCE.getInfo();
+
+
+
+
+        var b = new Phone.PhoneBuilder()
+                .setCamera("2MP")
+                .setBattry("8000MH")
+                .setRam("4gb")
+                .setCpu("octa")
+                .setJack(true)
+                .setNetworkType("4g")
+                .build();
+        System.out.println(b.getCamera() +" " + b.getBattry());
+
+        Coffee coffee = new Coffee.CoffeeBuilder().setCoffeeType("Cap").build();
+        System.out.println(coffee.getCoffeeType());
+
 
     }
 }
