@@ -36,5 +36,13 @@ public class Main {
         System.out.println(coffee.getCoffeeType());
 
 
+//        ShapeFactory shapeFactory = new ShapeFactory();
+//        shapeFactory.createShape("circle").draw();
+//        shapeFactory.createShape("rectangle").erase();
+
+//        for static factory pattern
+//        Shape shapeFactory = Circle.doGetCircle();
+//        shapeFactory.erase();
+
     }
 }
