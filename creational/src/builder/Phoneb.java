@@ -1,6 +1,6 @@
 package builder;
 
-public class Phone {
+public class Phoneb {
     private String camera;
     private String ram;
     private String processor;
@@ -37,7 +37,7 @@ public class Phone {
         return jack;
     }
 
-    private Phone(PhoneBuilder phoneBuilder) {
+    private Phoneb(PhoneBuilder phoneBuilder) {
         this.camera = phoneBuilder.camera;
         this.battry = phoneBuilder.battry;
         this.cpu = phoneBuilder.cpu;
@@ -91,8 +91,8 @@ public class Phone {
             return this;
         }
 
-        public Phone build() {
-            return new Phone(this);
+        public Phoneb build() {
+            return new Phoneb(this);
         }
     }
 }
