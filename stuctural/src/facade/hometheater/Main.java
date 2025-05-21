@@ -2,7 +2,7 @@ package facade.hometheater;
 
 public class Main {
     public static void main(String[] args) {
-        //IF FACADE DESIGN PATTERN WAS NOT THERE WE NEED TO CREATE INDIVIDUAL OBJECTS OF SUBSYSTEM!
+        //Create Components
         Projector projector = new Projector();
         SoundSystem soundSystem = new SoundSystem();
         StreamingPlayer streamingPlayer = new StreamingPlayer();
