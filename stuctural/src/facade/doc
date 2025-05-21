@@ -9,3 +9,10 @@ Facade: Simplifies a complex system by providing a higher-level interface
 Facade: Works with multiple objects to simplify their collective functionality
 Facade: Usually provides a new, simplified interface
 Choose Facade when you need to simplify a complex system
+
+
+
+
+* Facade defines a higher-level interface that makes the subsystem easier to use by wrapping a complicated subsystem.
+* This reduces the learning curve necessary to successfully leverage the subsystem.
+* It also promotes decoupling the subsystem from its potentially many clients.

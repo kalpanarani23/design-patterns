@@ -1,7 +1,7 @@
-package ObserverPattern.Observer;
+package ObserverPattern.example1.Observer;
 
 
-import ObserverPattern.Observable.StockObservable;
+import ObserverPattern.example1.Observable.StockObservable;
 
 public class EmailAlertObserverImpl implements NotificationAlertObserver {
     String emailId;

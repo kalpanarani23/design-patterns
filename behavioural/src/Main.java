@@ -1,7 +1,7 @@
-import ObserverPattern.Observable.IphoneObservableImpl;
-import ObserverPattern.Observable.StockObservable;
-import ObserverPattern.Observer.EmailAlertObserverImpl;
-import ObserverPattern.Observer.NotificationAlertObserver;
+import ObserverPattern.example1.Observable.IphoneObservableImpl;
+import ObserverPattern.example1.Observable.StockObservable;
+import ObserverPattern.example1.Observer.EmailAlertObserverImpl;
+import ObserverPattern.example1.Observer.NotificationAlertObserver;
 
 public class Main {
     public static void main(String[] args) {
