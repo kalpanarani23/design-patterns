@@ -1,0 +1,20 @@
+The Adapter design pattern, also known as the Wrapper pattern, is a structural design pattern that acts as a
+bridge between two incompatible interfaces. This pattern involves a single class which is responsible for joining
+functionalities of independent or incompatible interfaces.
+
+How Does the Adapter Pattern Work?
+This pattern involves three key components:
+
+Target: The interface that the client expects or uses.
+Adapter: The class that implements the Target interface and translates requests from the Target into a format that can be used by the Adaptee.
+Adaptee: The class that needs adapting to be used by the client.
+
+
+
+When To Use It?
+When we are working with two incompatible systems or class or interface, the adapter pattern can be very powerful to use.
+It makes the code simpler, consistent, and easy to reason about.
+
+Whenever we have several objects or methods doing something but have different implementations or different syntaxes,
+an adapter pattern can be definitely a good option! Like in our example, we were only dealing with data conversions.
+But their algorithms to convert the data into specific types are completely different.
