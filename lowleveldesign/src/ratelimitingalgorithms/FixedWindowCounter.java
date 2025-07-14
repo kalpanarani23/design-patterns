@@ -16,6 +16,28 @@ public class FixedWindowCounter {
     }
 
 
+    public boolean allow_request() {
+        long now = Instant.now().getEpochSecond();
+
+        if (now - currentWindowStart >= windowSizeInSeconds) {
+            currentWindowStart = now;
+            requestCount = 0;
+        }
+
+        if (requestCount < maxRequestsPerWindow) {
+            requestCount++;
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        FixedWindowCounter fixedWindowCounter = new FixedWindowCounter(60, 12);
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(100);
+            System.out.println(fixedWindowCounter.allow_request());
+        }
+    }
 
 
 }
