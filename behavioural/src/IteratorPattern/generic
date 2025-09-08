@@ -1,0 +1,115 @@
+import java.util.*;
+
+// -------------------- Generic Iterator Interface --------------------
+interface Iterator<T> {
+    T first();
+    T next();
+    boolean hasNext();
+}
+
+// -------------------- Generic Iterator Implementation --------------------
+class GenericIterator<T> implements Iterator<T> {
+    private List<T> items;
+    private int current;
+
+    public GenericIterator(List<T> items) {
+        this.items = items;
+        this.current = 0;
+    }
+
+    public T first() {
+        if (items.isEmpty()) return null;
+        current = 0;
+        return items.get(current);
+    }
+
+    public T next() {
+        if (hasNext()) {
+            return items.get(++current);
+        }
+        return null;
+    }
+
+    public boolean hasNext() {
+        return current < items.size() - 1;
+    }
+}
+
+// -------------------- Generic Aggregate Collection --------------------
+class AggregateCollection<T> {
+    private List<T> items = new ArrayList<>();
+
+    public void addItem(T item) {
+        items.add(item);
+    }
+
+    public Iterator<T> createIterator() {
+        return new GenericIterator<>(items);
+    }
+}
+
+// -------------------- Product Class --------------------
+class Product {
+    private String name;
+    private double price;
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+
+// -------------------- Notification Class --------------------
+class Notification {
+    private String message;
+
+    public Notification(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
+
+// -------------------- Main Class to Test --------------------
+public class GenericIteratorExample {
+    public static void main(String[] args) {
+
+        // === Product Collection ===
+        AggregateCollection<Product> productCollection = new AggregateCollection<>();
+        productCollection.addItem(new Product("Laptop", 99999.99));
+        productCollection.addItem(new Product("Smartphone", 49999.99));
+        productCollection.addItem(new Product("Headphones", 7999.99));
+
+        Iterator<Product> productIterator = productCollection.createIterator();
+        Product product = productIterator.first();
+        System.out.println("---- Products ----");
+        while (product != null) {
+            System.out.println("Product: " + product.getName() + ", Price: ₹" + product.getPrice());
+            product = productIterator.next();
+        }
+
+        // === Notification Collection ===
+        AggregateCollection<Notification> notificationCollection = new AggregateCollection<>();
+        notificationCollection.addItem(new Notification("Order shipped"));
+        notificationCollection.addItem(new Notification("Payment received"));
+        notificationCollection.addItem(new Notification("Delivery expected tomorrow"));
+
+        Iterator<Notification> notificationIterator = notificationCollection.createIterator();
+        Notification notification = notificationIterator.first();
+        System.out.println("\n---- Notifications ----");
+        while (notification != null) {
+            System.out.println("Notification: " + notification.getMessage());
+            notification = notificationIterator.next();
+        }
+    }
+}

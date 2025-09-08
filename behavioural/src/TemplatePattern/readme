@@ -1,0 +1,9 @@
+Template design pattern is a behavioural design pattern defines the basic structure of an algorithm
+in superclass and allowing subclasses to provide specific implementations of certain steps of the
+algorithm without modifying its overall structure. It promotes code reuse and enforces a common
+algorithm structure across multiple subclasses.
+
+
+1. Sending notification either through email or through SMS involves preparation of notification ,
+creation of message and sending of message as basic steps , so here we can define a common template
+that contains all the basic steps of sending notification and this template is implemented by email and SMS class
