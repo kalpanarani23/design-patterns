@@ -1,9 +1,11 @@
-package IteratorPattern.example2;
+package IteratorPattern.example3;
+
+import IteratorPattern.example2.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory {
+public class ProductInventory {
     private List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product) {
