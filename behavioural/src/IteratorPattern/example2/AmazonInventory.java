@@ -6,7 +6,7 @@ public class AmazonInventory {
         Product product2 = new Product("SmartPhone", 10000.0);
         Product product3 = new Product("Watch", 1000.0);
 
-        Inventory inventory = new Inventory();
+        ProductInventory inventory = new ProductInventory();
         inventory.addProduct(product1);
         inventory.addProduct(product2);
         inventory.addProduct(product3);
