@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/behavioural/behavioural.iml" filepath="$PROJECT_DIR$/behavioural/behavioural.iml" />
       <module fileurl="file://$PROJECT_DIR$/creational/creational.iml" filepath="$PROJECT_DIR$/creational/creational.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-patterns.iml" filepath="$PROJECT_DIR$/design-patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lld/lld.iml" filepath="$PROJECT_DIR$/lld/lld.iml" />
       <module fileurl="file://$PROJECT_DIR$/lowleveldesign/lowleveldesign.iml" filepath="$PROJECT_DIR$/lowleveldesign/lowleveldesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/stuctural/stuctural.iml" filepath="$PROJECT_DIR$/stuctural/stuctural.iml" />
     </modules>
